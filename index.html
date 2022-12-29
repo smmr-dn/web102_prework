@@ -6,22 +6,28 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body>
-    <!-- header row with logo -->
-    <div class="header">
+  <body style="background: url('assets/anime-bg.jpg'); background-repeat:no-repeat; background-size:cover;
+  height:100%; background-attachment: fixed; overflow: auto; display: flex; flex-direction: column; background-position: center;">
+    
+    <div class="topnav">
+        <!-- header row with logo -->
         <img id="tentacles" src="assets/tentacles.png">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
+        <a id="game-section" href="#games-container">Our Games</a></li>
+        <a href="#stats">Statistics</a>
     </div>
 
     <!-- background info about company -->
-    <h2>Welcome to Sea Monster!</h2>
-    <div id="description-container">
+    
+    <h2 id="page-title">Welcome to Sea Monster!</h2>
+    <div id="description-container" style="color:white;font-size: 20px;">
         <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
     </div>
+    
 
     <!-- top games & other interesting stats -->
-    <h2>Stats</h2>
-    <div class="stats-container">
+    <h2 id="page-title">Stats</h2>
+    <div class="stats-container" id="stats">
         <div class="stats-card">
             <h3>Individual Contributions</h3>
             <p id="num-contributions">
@@ -48,16 +54,24 @@
     </div>
 
     <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
-    <p>Check out each of our games below!</p>
+    <h2 id="page-title">Our Games</h2>
+    <p style="color:white;font-size: 20px;">Check out each of our games below!</p>
     <div id="button-container">
-        <button id="unfunded-btn">Show Unfunded Only</button>
-        <button id="funded-btn">Show Funded Only</button>
-        <button id="all-btn">Show All Games</button>
+        <button class="filter-btn" id="unfunded-btn">Show Unfunded Only</button>
+        <button class="filter-btn" id="funded-btn">Show Funded Only</button>
+        <button class="filter-btn" id="all-btn">Show All Games</button>
+        <input id="search-input" type="text" class="searchTerm" placeholder="Search a game">
+        <button class="searchButton" id="search-btn">
+            <i class="material-symbols-outlined">
+                search
+            </i>
+        </button>
     </div>
+    
     <div id="games-container">
 
     </div>
+    
 
     <script type="module" src="index.js"></script>
   </body>

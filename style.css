@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css?family=Material+Symbols+Outlined');
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    text-align: center;
+}
+
+#page-title {
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
 }
 
 #tentacles {
-    width: 50px;
+    width: 70px;
 }
 
-.header {
+.header-text {
+    color: white;
+}
+
+.topnav{
     display: flex;
-    background-color: lightblue;
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -19,6 +33,31 @@ body {
     margin-top: -10px;
 }
 
+#game-section {
+    margin-left: 10px;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(40, 40, 184);
+    border-radius: 20px;
+  }
+  
+  /* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+  
 .stats-container {
     display: flex;
     flex-direction: row;
@@ -29,7 +68,7 @@ body {
     box-shadow: 0 0 30px lightblue;
 }
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -67,14 +106,62 @@ body {
     box-shadow: 0 0 30px lightblue;
 }
 
+
+.searchTerm {
+    font-family: 'Cabin';
+    font-size: 15px;
+    width: 300px;
+    margin-left: 10px;
+    border: 3px solid rgb(71, 71, 196);
+    padding: 12px;
+    height: 15px;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    background-color: white;
+  }
+
+::placeholder{
+    color: rgb(71, 71, 196);
+}
+
+.searchTerm:focus{
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.searchButton {
+    text-align: center;
+    color: rgb(71, 71, 196);
+    border: 3px solid rgb(71, 71, 196);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+}
+
 #button-container {
     text-align: center;
 }
 
-button {
+.filter-btn {
     font-family: 'Cabin';
     border: none;
-    padding: 1%;
-    margin: 1%;
+    padding: 10px;
+    margin: 10px;
     border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(71, 71, 196);
+    border: 3px solid rgb(71, 71, 196);
+}
+
+.filter-btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
+
+.error-message {
+    color: white;
+    font-weight: bold;
 }
